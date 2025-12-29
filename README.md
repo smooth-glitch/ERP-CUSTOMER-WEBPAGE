@@ -41,11 +41,6 @@ A modern, responsive **ERP customer/workspace portal** built with **HTML**, **CS
 
 ---
 
-## 🗂️ Project Structure
-
-
----
-
 ## 🚀 Getting Started
 
 ### ✅ Run locally (recommended)
