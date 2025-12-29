@@ -137,12 +137,6 @@ const TEMPLATE_SUPPORT = "YOUR_SUPPORT_TEMPLATE_ID";
 
 ---
 
-## 📄 License
-
-Add your preferred license (MIT/Apache-2.0/etc.) in a `LICENSE` file.
-
----
-
 ## 🙌 Author
 
 Designed & developed by **Arjun**.
