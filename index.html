@@ -1,0 +1,1250 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axpert ERP - Sales, Purchase, Assets &amp; Finance</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+
+    <link type="text/css" rel="stylesheet"
+        href="../../training114/HTMLPages/Css/styles_1765519972240.css?v=1766121585744">
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="neural-network" id="neuralNetwork"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50,5 85,25 85,65 50,85 15,65 15,25" fill="none" stroke="url(#gradientStroke)"
+                        stroke-width="2"></polygon>
+
+                    <circle cx="50" cy="30" r="4" fill="#00ffff"></circle>
+                    <circle cx="35" cy="45" r="4" fill="#ff00ff"></circle>
+                    <circle cx="65" cy="45" r="4" fill="#ff00ff"></circle>
+                    <circle cx="35" cy="65" r="4" fill="#00ffff"></circle>
+                    <circle cx="65" cy="65" r="4" fill="#00ffff"></circle>
+                    <circle cx="50" cy="55" r="5" fill="#7c3aed"></circle>
+
+                    <line x1="50" y1="30" x2="35" y2="45" stroke="#00ffff" stroke-width="1" opacity="0.5"></line>
+                    <line x1="50" y1="30" x2="65" y2="45" stroke="#00ffff" stroke-width="1" opacity="0.5"></line>
+                    <line x1="35" y1="45" x2="50" y2="55" stroke="#ff00ff" stroke-width="1" opacity="0.5"></line>
+                    <line x1="65" y1="45" x2="50" y2="55" stroke="#ff00ff" stroke-width="1" opacity="0.5"></line>
+                    <line x1="50" y1="55" x2="35" y2="65" stroke="#7c3aed" stroke-width="1" opacity="0.5"></line>
+                    <line x1="50" y1="55" x2="65" y2="65" stroke="#7c3aed" stroke-width="1" opacity="0.5"></line>
+
+                    <defs>
+                        <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color: #00ffff; stop-opacity: 1"></stop>
+                            <stop offset="50%" style="stop-color: #ff00ff; stop-opacity: 1"></stop>
+                            <stop offset="100%" style="stop-color: #7c3aed; stop-opacity: 1"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <span class="logo-text">Axpert ERP</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">Overview</a></li>
+                <li><a href="#speakers">Modules</a></li>
+                <li><a href="#schedule">Quick Links</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#sponsors">Reports</a></li>
+                <li><a href="#register">Support</a></li>
+            </ul>
+
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#about" onclick="closeMenu()">Overview</a>
+            <a href="#speakers" onclick="closeMenu()">Modules</a>
+            <a href="#schedule" onclick="closeMenu()">Quick Links</a>
+            <a href="#analytics" onclick="closeMenu()">Analytics</a>
+            <a href="#sponsors" onclick="closeMenu()">Reports</a>
+            <a href="#register" onclick="closeMenu()">Support</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Axpert ERP</h1>
+            <p>Sales • Purchase • Assets • Finance — unified operations dashboard</p>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">Posted Sales Invoices</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Posted Purchase Invoices</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Active Modules</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="25">0</span>
+                    <span class="stat-label">Reports &amp; Dashboards</span>
+                </div>
+            </div>
+
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#about" class="btn btn-primary">ERP Overview</a>
+                <a href="#schedule" class="btn btn-secondary">Open Quick Links</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="animate-on-scroll">About Axpert ERP</h2>
+
+        <div class="about-content">
+            <div class="about-text animate-on-scroll slide-left">
+                <p>
+                    This workspace centralizes daily ERP operations built on Axpert—Sales invoicing, customer receipts,
+                    Purchase
+                    invoicing, supplier payments, asset acquisition and finance postings.
+                </p>
+
+                <p>
+                    Use Quick Links to open key TStructs and IViews instantly, and track monthly activity, outstanding
+                    amounts,
+                    supplier spend and customer-wise performance.
+                </p>
+
+                <p>
+                    Designed for fast navigation, responsive UI and operational clarity across modules with drilldowns
+                    from
+                    summaries to transaction-level data.
+                </p>
+
+                <p>
+                    Start with
+                    <a href="javascript:void(0)" data-eot="transid=sinva,recordid=0"
+                        aria-label="Open Sales Invoice">Sales Invoice</a>
+                    and
+                    <a href="javascript:void(0)" data-eot="transid=pinv,recordid=0"
+                        aria-label="Open Purchase Invoice">Purchase Invoice</a>,
+                    then review
+                    <a href="javascript:void(0)" data-ivname="m_pur" data-size="modal-xl"
+                        aria-label="Open Monthly Purchase Summary">Monthly Purchase Summary</a>.
+                </p>
+            </div>
+
+            <div class="about-visual animate-on-scroll slide-right">
+                <div class="blockchain-visual">
+                    <div class="block">SINV</div>
+                    <div class="block">PINV</div>
+                    <div class="block">PREC</div>
+                    <div class="block">SPREC</div>
+                    <div class="block">JENT</div>
+                    <div class="block">IV</div>
+                    <div class="block">GL</div>
+                    <div class="block">ASSET</div>
+                    <div class="block">KPI</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-stats animate-on-scroll scale-up">
+            <div class="about-stat">
+                <span class="about-stat-number">Sales</span>
+                <span class="about-stat-label">Invoices • Receipts • Customer-wise reports</span>
+            </div>
+            <div class="about-stat">
+                <span class="about-stat-number">Purchase</span>
+                <span class="about-stat-label">Invoices • Supplier spend • Monthly summary</span>
+            </div>
+            <div class="about-stat">
+                <span class="about-stat-number">Assets</span>
+                <span class="about-stat-label">Acquisition • Funding • Asset history</span>
+            </div>
+            <div class="about-stat">
+                <span class="about-stat-number">Finance</span>
+                <span class="about-stat-label">Journal • Ledgers • Reconciliation views</span>
+            </div>
+        </div>
+
+        <div class="hex-decoration" style="top: 10%; left: 5%"></div>
+        <div class="hex-decoration" style="top: 70%; right: 10%; animation-delay: 2s"></div>
+        <div class="hex-decoration" style="top: 40%; right: 5%; animation-delay: 4s"></div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="speakers" class="section">
+        <h2 class="animate-on-scroll">ERP Modules</h2>
+
+        <div class="speakers-grid">
+            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 1">
+                <div class="speaker-avatar">SL</div>
+                <h3 class="speaker-name">Sales Module</h3>
+                <div class="speaker-title">Order-to-Cash</div>
+                <p class="speaker-bio">
+                    Create Sales Invoices, track customer receipts and monitor customer-wise sales performance through
+                    IViews and reports.
+                </p>
+            </div>
+
+            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 2">
+                <div class="speaker-avatar">PR</div>
+                <h3 class="speaker-name">Purchase Module</h3>
+                <div class="speaker-title">Procure-to-Pay</div>
+                <p class="speaker-bio">
+                    Post Purchase Invoices, track supplier payments and analyze monthly purchase summary and supplier
+                    spend.
+                </p>
+            </div>
+
+            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 3">
+                <div class="speaker-avatar">FN</div>
+                <h3 class="speaker-name">Finance Module</h3>
+                <div class="speaker-title">Journals &amp; Ledgers</div>
+                <p class="speaker-bio">Journal entries, ledger postings and finance controls with drilldown reports.</p>
+            </div>
+
+            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 4">
+                <div class="speaker-avatar">AS</div>
+                <h3 class="speaker-name">Assets Module</h3>
+                <div class="speaker-title">Acquisition &amp; Tracking</div>
+                <p class="speaker-bio">
+                    Asset acquisitions with payment mode split, funding source tracking and asset acquisition history
+                    views.
+                </p>
+            </div>
+
+            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 5">
+                <div class="speaker-avatar">IV</div>
+                <h3 class="speaker-name">Reports &amp; Dashboards</h3>
+                <div class="speaker-title">IViews &amp; Charts</div>
+                <p class="speaker-bio">
+                    Dashboards for sales per customer, monthly purchase summary, purchases per supplier and item-wise
+                    summaries.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section">
+        <h2 class="animate-on-scroll">Quick Links (Forms &amp; Reports)</h2>
+
+        <div class="schedule-tabs">
+            <button class="tab-btn active" onclick="showSchedule('day1', event)">Sales</button>
+            <button class="tab-btn" onclick="showSchedule('day2', event)">Purchase</button>
+            <button class="tab-btn" onclick="showSchedule('day3', event)">Finance &amp; Assets</button>
+        </div>
+
+        <div id="day1" class="schedule-content active">
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Sales</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Sales Invoice</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            Create a Sales Invoice:
+                            <a href="javascript:void(0)" data-eot="transid=sinva,recordid=0">Sales Invoice</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Receipts</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Customer Payment Receipt</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            Record customer receipt:
+                            <a href="javascript:void(0)" data-eot="transid=prec,recordid=0">Customer Payment Receipt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Report</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Sales List</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            View Sales list:
+                            <a href="javascript:void(0)" data-ivname="s_list" data-size="modal-xl">Sales List</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Sales</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Sales Summary</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-ivname="s_summary" data-size="modal-xl">Open Sales
+                                Summary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Sales</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Item Wise Sales Summary</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-ivname="isales" data-size="modal-xl">Open Item Wise Sales
+                                Summary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Chart</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Sales per Customer</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            Customer-wise sales:
+                            <a href="javascript:void(0)" data-ivname="sales_per_customer" data-size="modal-xl">Sales Per
+                                Customer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="day2" class="schedule-content">
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Purchase</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Purchase Invoice</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            Create a Purchase Invoice:
+                            <a href="javascript:void(0)" data-eot="transid=pinv,recordid=0">Purchase Invoice</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Payments</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Supplier Payment Receipt</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            Record supplier payment:
+                            <a href="javascript:void(0)" data-eot="transid=sprec,recordid=0">Supplier Payment
+                                Receipt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Report</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Purchase List</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            View Purchase list:
+                            <a href="javascript:void(0)" data-ivname="p_list" data-size="modal-xl">Purchase List</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Purchase</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Purchase Summary</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-ivname="p_summary" data-size="modal-xl">Open Purchase
+                                Summary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Summary</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Monthly Purchase Summary</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            Monthly summary:
+                            <a href="javascript:void(0)" data-ivname="m_pur" data-size="modal-xl">Monthly Purchase
+                                Summary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Purchase</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Purchases Per Supplier</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-ivname="psup" data-size="modal-xl">Open Purchases Per
+                                Supplier</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Purchase</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Item Wise Purchase Summary</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-ivname="ipur" data-size="modal-xl">Open Item Wise Purchase
+                                Summary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Assets</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Asset Acquisition History</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-ivname="acqhist" data-size="modal-xl">Open Asset
+                                Acquisition History</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="day3" class="schedule-content">
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Finance</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Journal Entry</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            Post journal entry:
+                            <a href="javascript:void(0)" data-eot="transid=jent,recordid=0">Journal Entry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Assets</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Assets</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-eot="transid=amas,recordid=0">Open Asset Master</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Assets</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Asset Categories</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-eot="transid=acmas,recordid=0">Open Asset Category
+                                Master</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Assets</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Asset Acquisition History</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            View asset history:
+                            <a href="javascript:void(0)" data-ivname="acqhist" data-size="modal-xl">Asset Acquisition
+                                History</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Support</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Issue Reporting / Change Request</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            Raise a ticket using the Support form below for bug fixes, enhancements or access requests.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Masters</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Customers</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-eot="transid=cmas,recordid=0">Open Customer Master</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Masters</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Suppliers</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-eot="transid=smas,recordid=0">Open Supply Master</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Masters</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Ledgers</div>
+                            <div class="timeline-speaker"></div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">
+                            <a href="javascript:void(0)" data-eot="transid=lmas,recordid=0">Open Ledger Master</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="section">
+        <h2 class="animate-on-scroll">Asset Acquisition Analytics</h2>
+        <!-- Analytics filters -->
+        <div class="analytics-toolbar animate-on-scroll">
+            <div class="toolbar-left">
+                <label class="filter-label" for="filterRange">Range</label>
+                <select id="filterRange" class="filter-select">
+                    <option value="all">All</option>
+                    <option value="year">This year</option>
+                    <option value="month">This month</option>
+                </select>
+
+                <label class="filter-label" for="filterFunding">Funding</label>
+                <select id="filterFunding" class="filter-select">
+                    <option value="all">All</option>
+                    <!-- options will be filled by JS -->
+                </select>
+
+                <label class="filter-label" for="filterVendor">Vendor</label>
+                <select id="filterVendor" class="filter-select">
+                    <option value="all">All</option>
+                    <!-- options will be filled by JS -->
+                </select>
+            </div>
+
+            <div class="toolbar-right">
+                <button id="filterReset" class="btn btn-secondary btn-sm" type="button">
+                    Reset
+                </button>
+            </div>
+        </div>
+
+        <!-- Analytics KPI strip -->
+        <div class="analytics-kpis animate-on-scroll">
+            <button class="kpi-card" id="kpiOpenAcqHist" type="button" aria-label="Open acquisition history">
+                <span class="kpi-label">Total spend</span>
+                <span class="kpi-value" id="kpiTotalSpend">0</span>
+            </button>
+
+            <div class="kpi-card">
+                <span class="kpi-label">Transactions</span>
+                <span class="kpi-value" id="kpiTxnCount">0</span>
+            </div>
+
+            <div class="kpi-card">
+                <span class="kpi-label">Top vendor</span>
+                <span class="kpi-value kpi-text" id="kpiTopVendor">-</span>
+            </div>
+
+            <div class="kpi-card">
+                <span class="kpi-label">Top funding</span>
+                <span class="kpi-value kpi-text" id="kpiTopFunding">-</span>
+            </div>
+        </div>
+
+        <div class="analytics-grid">
+            <div class="analytics-card animate-on-scroll scale-up">
+                <h3 class="analytics-title">Funding Source Split</h3>
+                <p class="analytics-subtitle">Total acquisition amount by funding source</p>
+                <div class="chart-wrap">
+                    <canvas id="erpPieChart" height="260"></canvas>
+                </div>
+            </div>
+
+            <div class="analytics-card animate-on-scroll scale-up">
+                <h3 class="analytics-title">Spend by Vendor</h3>
+                <p class="analytics-subtitle">Total acquisition amount per vendor</p>
+                <div class="chart-wrap">
+                    <canvas id="erpBarChart" height="260"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="section">
+        <h2 class="animate-on-scroll">Reports &amp; Dashboards</h2>
+
+        <div class="sponsors-section animate-on-scroll">
+            <div class="sponsor-tiers">
+
+                <!-- PLATINUM: Sales dashboards -->
+                <div class="sponsor-tier">
+                    <h3 class="tier-title platinum">Sales Dashboards</h3>
+
+                    <div class="sponsors-grid platinum">
+
+                        <div class="sponsor-card platinum animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 1">
+                            <div class="sponsor-logo">SL</div>
+                            <h4 class="sponsor-name">Sales List</h4>
+                            <p class="sponsor-description">Open Sales List report</p>
+                            <a href="javascript:void(0)" data-ivname="s_list" data-size="modal-xl"
+                                aria-label="Open Sales List"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                        <div class="sponsor-card platinum animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 2">
+                            <div class="sponsor-logo">SS</div>
+                            <h4 class="sponsor-name">Sales Summary</h4>
+                            <p class="sponsor-description">Open sales summary report</p>
+                            <a href="javascript:void(0)" data-ivname="ssummary" data-size="modal-xl"
+                                aria-label="Open Sales Summary"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                        <div class="sponsor-card platinum animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 3">
+                            <div class="sponsor-logo">SC</div>
+                            <h4 class="sponsor-name">Sales Per Customer</h4>
+                            <p class="sponsor-description">Customer-wise sales analysis</p>
+                            <a href="javascript:void(0)" data-ivname="sales_per_customer" data-size="modal-xl"
+                                aria-label="Open Sales Per Customer"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                        <div class="sponsor-card platinum animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 4">
+                            <div class="sponsor-logo">IS</div>
+                            <h4 class="sponsor-name">Item Wise Sales Summary</h4>
+                            <p class="sponsor-description">Item-level sales summary</p>
+                            <a href="javascript:void(0)" data-ivname="isales" data-size="modal-xl"
+                                aria-label="Open Item Wise Sales Summary"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- GOLD: Purchase & operations -->
+                <div class="sponsor-tier">
+                    <h3 class="tier-title gold">Purchase &amp; Operations</h3>
+
+                    <div class="sponsors-grid gold">
+
+                        <div class="sponsor-card gold animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 5">
+                            <div class="sponsor-logo">PL</div>
+                            <h4 class="sponsor-name">Purchase List</h4>
+                            <p class="sponsor-description">Open purchase list report</p>
+                            <a href="javascript:void(0)" data-ivname="p_list" data-size="modal-xl"
+                                aria-label="Open Purchase List"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                        <div class="sponsor-card gold animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 6">
+                            <div class="sponsor-logo">PS</div>
+                            <h4 class="sponsor-name">Purchase Summary</h4>
+                            <p class="sponsor-description">Open purchase summary report</p>
+                            <a href="javascript:void(0)" data-ivname="psummary" data-size="modal-xl"
+                                aria-label="Open Purchase Summary"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                        <div class="sponsor-card gold animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 7">
+                            <div class="sponsor-logo">MP</div>
+                            <h4 class="sponsor-name">Monthly Purchase Summary</h4>
+                            <p class="sponsor-description">Open monthly purchase summary</p>
+                            <a href="javascript:void(0)" data-ivname="m_pur" data-size="modal-xl"
+                                aria-label="Open Monthly Purchase Summary"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                        <div class="sponsor-card gold animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 8">
+                            <div class="sponsor-logo">PS</div>
+                            <h4 class="sponsor-name">Purchases per Supplier</h4>
+                            <p class="sponsor-description">Open supplier-wise purchases</p>
+                            <a href="javascript:void(0)" data-ivname="psup" data-size="modal-xl"
+                                aria-label="Open Purchases per Supplier"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                        <div class="sponsor-card gold animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 9">
+                            <div class="sponsor-logo">IW</div>
+                            <h4 class="sponsor-name">Item-wise Purchase Summary</h4>
+                            <p class="sponsor-description">Open item-wise purchase summary</p>
+                            <a href="javascript:void(0)" data-ivname="ipur" data-size="modal-xl"
+                                aria-label="Open Item-wise Purchase Summary"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SILVER: Audit / Assets -->
+                <div class="sponsor-tier">
+                    <h3 class="tier-title silver">Audit &amp; Assets</h3>
+
+                    <div class="sponsors-grid silver">
+
+                        <div class="sponsor-card silver animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 10">
+                            <div class="sponsor-logo">AH</div>
+                            <h4 class="sponsor-name">Asset Acquisition History</h4>
+                            <p class="sponsor-description">Open asset acquisition history</p>
+                            <a href="javascript:void(0)" data-ivname="acqhist" data-size="modal-xl"
+                                aria-label="Open Asset Acquisition History"
+                                style="position:absolute; inset:0; z-index:5; opacity:0"></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Register / Support Section -->
+    <section id="register" class="section">
+        <div class="register-section animate-on-scroll">
+            <div class="register-content">
+                <h2 class="register-title">Support &amp; Updates</h2>
+                <p class="register-subtitle">Receive ERP update notes, downtime alerts and feature rollout information
+                </p>
+
+                <form id="subscribeForm" class="email-form" onsubmit="handleEmailSubmit(event)">
+                    <input type="email" class="email-input" placeholder="Enter your email address" required=""
+                        id="emailInput" name="user_email">
+
+                    <!-- Optional template variables (safe to keep) -->
+                    <input type="hidden" name="company_name" id="sub_company_name" value="Axpert ERP" />
+                    <input type="hidden" name="website_url" id="sub_website_url" />
+
+                    <button type="submit" class="submit-btn" id="subscribeBtn">Subscribe</button>
+                </form>
+
+
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </div>
+
+        <div class="contact-info-section animate-on-scroll">
+            <div class="contact-container">
+                <div class="contact-form-column">
+                    <h3 class="contact-form-title">Send Support Request</h3>
+
+                    <form id="supportForm" class="contact-form" onsubmit="handleContactSubmit(event)">
+                        <div class="form-field">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="from_name" required="" placeholder="Your name">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="from_email" required=""
+                                placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" name="subject" required=""
+                                placeholder="Bug / Enhancement / Access request">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" required=""
+                                placeholder="Describe the issue / requirement..."></textarea>
+                        </div>
+
+                        <!-- Optional template variables (safe to keep) -->
+                        <input type="hidden" name="company_name" id="sup_company_name" value="Axpert ERP" />
+                        <input type="hidden" name="website_url" id="sup_website_url" />
+
+                        <button type="submit" class="contact-submit-btn" id="supportBtn">Send Request</button>
+                    </form>
+
+                </div>
+
+                <div class="contact-info-column">
+                    <h3 class="contact-info-title">Get In Touch</h3>
+
+                    <div class="contact-info-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Environment</span>
+                                <span class="contact-value">Axpert ERP
+                                    Sales • Purchase • Assets • Finance
+                                    Internal workspace</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">
+                                    <a href="mailto:agilebiz.support@agile-labs.com">agilebiz.support@agile-labs.com</a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 80 0000 0000</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Release Window</span>
+                                <span class="contact-value">Application Live</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>Axpert ERP</h2>
+            <p>Sales • Purchase • Assets • Finance • Internal Workspace</p>
+
+            <div class="social-links">
+                <a href="https://x.com/" class="social-link" rel="nofollow noopener" target="_blank">T</a>
+                <a href="#" class="social-link">L</a>
+                <a href="#" class="social-link">F</a>
+                <a href="#" class="social-link">I</a>
+            </div>
+
+            <p>© 2026 Axpert ERP. All rights reserved. | Designed by Arjun</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        // >>> REPLACE these with your EmailJS values
+        const EMAILJS_PUBLIC_KEY = "rJp5aBTAAA5utA6x9";
+        const EMAILJS_SERVICE_ID = "service_pzi8ulq";
+        const TEMPLATE_SUBSCRIBE = "send_request";
+        const TEMPLATE_SUPPORT = "template_7sa4xzv";
+
+        function setCommonTemplateFields() {
+            var url = window.location.href;
+
+            var subUrl = document.getElementById("sub_website_url");
+            if (subUrl) subUrl.value = url;
+
+            var supUrl = document.getElementById("sup_website_url");
+            if (supUrl) supUrl.value = url;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            try {
+                emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+            } catch (e) {
+                console.error("EmailJS init failed:", e);
+            }
+
+            setCommonTemplateFields();
+
+            // Keep your inline HTML onsubmit="handleEmailSubmit(event)" working
+            window.handleEmailSubmit = function (event) {
+                event.preventDefault();
+                setCommonTemplateFields();
+
+                var form = document.getElementById("subscribeForm");
+                var msg = document.getElementById("formMessage");
+                var btn = document.getElementById("subscribeBtn");
+
+                if (!form) return;
+
+                var originalText = btn ? btn.innerText : "";
+                if (msg) msg.textContent = "Submitting...";
+                if (btn) { btn.disabled = true; btn.innerText = "Submitting..."; }
+
+                emailjs.sendForm(EMAILJS_SERVICE_ID, TEMPLATE_SUBSCRIBE, form).then(
+                    function () {
+                        if (msg) msg.textContent = "Subscribed successfully.";
+                        if (btn) btn.innerText = "Subscribed!";
+                        form.reset();
+                        setCommonTemplateFields();
+
+                        setTimeout(function () {
+                            if (btn) { btn.disabled = false; btn.innerText = originalText || "Subscribe"; }
+                            if (msg) msg.textContent = "";
+                        }, 2500);
+                    },
+                    function (err) {
+                        console.error("EmailJS subscribe failed:", err);
+                        if (msg) msg.textContent = "Failed to subscribe. Please try again.";
+                        if (btn) { btn.disabled = false; btn.innerText = originalText || "Subscribe"; }
+                    }
+                );
+            };
+
+            // Keep your inline HTML onsubmit="handleContactSubmit(event)" working
+            window.handleContactSubmit = function (event) {
+                event.preventDefault();
+                setCommonTemplateFields();
+
+                var form = document.getElementById("supportForm");
+                var btn = document.getElementById("supportBtn");
+
+                if (!form) return;
+
+                var originalText = btn ? btn.innerText : "";
+                if (btn) { btn.disabled = true; btn.innerText = "Sending..."; }
+
+                emailjs.sendForm(EMAILJS_SERVICE_ID, TEMPLATE_SUPPORT, form).then(
+                    function () {
+                        alert("Support request sent.");
+                        form.reset();
+                        setCommonTemplateFields();
+                        if (btn) { btn.disabled = false; btn.innerText = originalText || "Send Request"; }
+                    },
+                    function (err) {
+                        console.error("EmailJS support failed:", err);
+                        alert("Failed to send request. Please try again.");
+                        if (btn) { btn.disabled = false; btn.innerText = originalText || "Send Request"; }
+                    }
+                );
+            };
+        });
+    </script>
+
+    <!-- Chart.js (for analytics charts) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- Your existing JS -->
+    <script src="script.js"></script>
+
+
+    <!-- Popup handler (MOVED inside body) -->
+    <script>
+        function handlePopupClickTimeline(e, btn) {
+            if (!btn) return;
+
+            var eot = btn.getAttribute('data-eot') || '';
+            if (!eot) return;
+
+            var recordid = '';
+            var transid = '';
+            var parts = eot.split(',');
+
+            for (var i = 0; i < parts.length; i++) {
+                var kv = parts[i].trim().split('=');
+                var key = (kv[0] || '').trim();
+                var value = (kv[1] || '').trim();
+                if (key === 'recordid') recordid = value;
+                if (key === 'transid') transid = value;
+            }
+
+            if (!transid) return;
+
+            var url =
+                'tstruct.aspx?transid=' + encodeURIComponent(transid) +
+                '&recordid=' + (recordid || '0') +
+                '&act=open&dummyload=false';
+
+            openPopupUrl(url, 'modal-lg');
+        }
+
+        function openPopupUrl(url, sizeClass) {
+            if (!url) return;
+
+            var size = sizeClass || 'modal-lg';
+
+            if (window.parent && typeof window.parent.createPopup === 'function') {
+                window.parent.createPopup(
+                    url,
+                    false,
+                    function (_e, popup) {
+                        try {
+                            var modal = popup && popup.modal && popup.modal._element;
+                            var dialog = modal ? modal.querySelector('.modal-dialog') : null;
+                            if (dialog) {
+                                dialog.classList.remove('modal-sm', 'modal-lg', 'modal-xl');
+                                dialog.classList.add(size);
+                            }
+                        } catch (err) { }
+                    },
+                    null
+                );
+            } else {
+                window.location.href = url;
+            }
+        }
+
+        function buildIViewUrl(ivname) {
+            if (!ivname) return '';
+            return 'iview.aspx?ivname=' + encodeURIComponent(ivname);
+        }
+
+        function handleIViewPopupClick(e, btn) {
+            if (!btn) return;
+            var ivname = btn.getAttribute('data-ivname') || '';
+            if (!ivname) return;
+
+            var url = buildIViewUrl(ivname);
+            openPopupUrl(url, btn.getAttribute('data-size') || 'modal-xl');
+        }
+
+        function buildChartUrl(chartid) {
+            if (!chartid) return '';
+            return 'chart.aspx?chartid=' + encodeURIComponent(chartid);
+        }
+
+        function handleChartPopupClick(e, btn) {
+            if (!btn) return;
+
+            var chartid = btn.getAttribute('data-chartid') || '';
+            if (!chartid) return;
+
+            var url = buildChartUrl(chartid);
+            openPopupUrl(url, btn.getAttribute('data-size') || 'modal-xl');
+        }
+
+        // Delegated click handling:
+        // - Uses stopPropagation() so timeline expand/collapse won't trigger when clicking the link.
+        document.addEventListener('click', function (e) {
+            var t = e.target.closest && e.target.closest('a[data-eot]');
+            if (t) {
+                e.preventDefault();
+                e.stopPropagation();
+                handlePopupClickTimeline(e, t);
+                return;
+            }
+
+            var iv = e.target.closest && e.target.closest('a[data-ivname]');
+            if (iv) {
+                e.preventDefault();
+                e.stopPropagation();
+                handleIViewPopupClick(e, iv);
+                return;
+            }
+
+            var ch = e.target.closest && e.target.closest('a[data-chartid]');
+            if (ch) {
+                e.preventDefault();
+                e.stopPropagation();
+                handleChartPopupClick(e, ch);
+                return;
+            }
+
+            var u = e.target.closest && e.target.closest('a[data-url]');
+            if (u) {
+                e.preventDefault();
+                e.stopPropagation();
+                openPopupUrl(u.getAttribute('data-url'), u.getAttribute('data-size') || 'modal-lg');
+                return;
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript"
+        src="../../training114/HTMLPages/Js/script_1765519972240.js?v=1766121585747"></script>
+</body>
+
+</html>
